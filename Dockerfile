@@ -48,7 +48,6 @@ ENV HOME=/home/user
 
 RUN pip --no-cache-dir install rich==12.4.4
 
-# Install Miniconda and Python 3.8
 ENV PATH=/usr/local/lib/:$PATH
 ENV PATH=/home/user/.local/lib/:$PATH
 ENV PATH=/home/user/.local/bin/:$PATH
@@ -62,7 +61,6 @@ RUN pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0
     && pip install torch-tensorrt -f https://github.com/NVIDIA/Torch-TensorRT/releases \
     # >>> Install PyTorch Lightning
     && pip install pytorch_lightning==1.6.4 \
-    # && pip --no-cache-dir install rich==12.4.4 \
     && pip --no-cache-dir install termcolor==1.1.0 \
     && pip --no-cache-dir install git+https://github.com/rwightman/pytorch-image-models.git \
     && pip --no-cache-dir install albumentations==1.2.0 \
@@ -74,8 +72,7 @@ RUN pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0
     && pip --no-cache-dir install transformers \
     # >>> Install mmcv-full: (https://mmcv.readthedocs.io/en/latest/get_started/installation.html)
     && pip --no-cache-dir install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.11.0/index.html \
-    # && pip --no-cache-dir install -U openmim==0.1.6 \
     && pip --no-cache-dir install ensemble_boxes
-    
+
 # Set the default command to python3
 CMD ["python3"]
