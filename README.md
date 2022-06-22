@@ -1,5 +1,7 @@
 # Customized Torch TensorRT Dockerfile
 
-Pytorch and Nvidia have published their docker images compiled with Torch TensorRT. However, the pytorch compiled does not include XXX_cuda_cu.so files. 
+Pytorch and Nvidia have published their docker images compiled with Torch TensorRT. However, the PyTorch compiled omits XXX_cuda_cu.so files. 
 
-This dockerfile is based on the TensorRT docker image provided by Nvidia and is installed with pytorch environment using pip in the dockerfile.
+This dockerfile is based on the TensorRT docker image provided by Nvidia and is installed with a pytorch environment using pip in the dockerfile.
+
+The generated docker image includes TensorRT, Torch TensorRT, PyTorch, PyTorch Lightning, and OpenmmLab.
