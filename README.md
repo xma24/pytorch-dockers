@@ -29,6 +29,7 @@ Dockerfile path: `PyTorch-Dockerfile/Dockerfile`
 
 ```python
 
+# Build docker image from the Dockerfile
 docker build -t uni_cuda_latest:v .
 
 
@@ -39,7 +40,7 @@ docker run -itd --init --shm-size="300g" \
     # --volume="SOURCE:DESTINATION" \
     -v /etc/passwd:/etc/passwd:ro \
     -v /etc/group:/etc/group:ro \
-    log4maxim/uni_cuda_latest:v python3
+    uni_cuda_latest:v python3
 
 
 ## Use the docker
